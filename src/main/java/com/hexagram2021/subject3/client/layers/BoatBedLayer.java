@@ -16,6 +16,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.model.data.ModelData;
+import net.minecraft.resources.ResourceLocation;
+import static com.hexagram2021.subject3.Subject3.MODID;
 
 @OnlyIn(Dist.CLIENT)
 public class BoatBedLayer {
@@ -43,7 +45,7 @@ public class BoatBedLayer {
 			transform.translate(0.0D, -0.125D, 0.0D);
 		}
 		transform.translate(-0.5D, 0.0D, -0.5D);
-		Minecraft.getInstance().getBlockRenderer().renderSingleBlock(technicalBlock, transform, buffer, uv2, OverlayTexture.NO_OVERLAY, ModelData.EMPTY, RenderType.cutout());
+		Minecraft.getInstance().getBlockRenderer().renderSingleBlock(technicalBlock, transform, buffer, uv2, OverlayTexture.NO_OVERLAY);
 		transform.popPose();
 	}
 }
